@@ -1,0 +1,16 @@
+<div>
+  <h3>{{mode}}New Student Form</h3>
+  <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+      <mat-form-field >
+          <input matInput placeholder="First Name" id="firstname" [(ngModel)]=" firstName" name="firstname" >
+      </mat-form-field>
+
+      <mat-form-field >
+          <input matInput placeholder="Last Name" id="lastname" [(ngModel)]=" lastName" name="lastname" >
+      </mat-form-field>
+
+      <p>
+          <button type="submit" mat-raised-button color="primary">Submit</button>
+      </p>
+  </form>
+  </div>

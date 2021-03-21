@@ -1,0 +1,139 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <label>
+    Contact Name:
+    <input type="text" formControlName="contactName" [(ngModel)]="contactName" required>
+  </label>
+
+  <label>
+    Contact Job Title:
+    <input type="text" formControlName="contactJobTitle" [(ngModel)]="contactJobTitle">
+  </label>
+
+  <label>
+    Contact E-mail:
+    <input type="text" formControlName="contactEmail">
+  </label>
+
+  <label>
+    Contact Phone:
+    <input type="text" formControlName="contactPhone">
+  </label>
+
+
+  <div formGroupName="address">
+
+    <h1>Section II - Project for Which Students Will Participate</h1>
+
+    <h3>Organization Particulars</h3>
+
+    <label>
+      Organization Name:
+      <input type="text" formControlName="organizationname">
+    </label>
+
+    <label>
+      Organization Address:
+      <input type="text" formControlName="organizationaddress">
+    </label>
+
+    <label>
+      Organization zip:
+      <input type="number" (keyup)="onChangeZip($event, this.Organizationcity)" formControlName="organizationzip">
+    </label>
+
+    <label>
+      Organization city:
+      <input type="text" formControlName="organizationcity">
+    </label>
+
+    <label>
+      Organization Website:
+      <input type="text" formControlName="Organizationwebsite">
+    </label>
+
+    <div formGroupName="address">
+      <h3>Address</h3>
+
+      <label>
+           Address 1:
+           <input type="text" formControlName="address1">
+      </label>
+
+      <label>
+        Address 2:
+        <input type="text" formControlName="address2">
+      </label>
+
+      <label>
+        State:
+        <input type="text" formControlName="state">
+      </label>
+
+      <label>
+        Zip Code:
+        <input type="number" (keyup)="onChangeZip($event, this.City)" formControlName="zip">
+      </label>
+
+      <label>
+        City:
+        <input type="text" formControlName="city">
+      </label>
+    </div>
+
+  </div>
+
+  <div formGroupName="studentaddress">
+    <h3>Student Participation Project Section</h3>
+
+    <label>
+      Project Title:
+      <input type="text" formControlName="projecttitle">
+    </label>
+
+    <label>
+      Description of Project:
+      <input type="text" formControlName="descriptionofproject">
+    </label>
+
+    <label>
+      Skill Requirements:
+      <input type="text" formControlName="skillrequirements">
+    </label>
+
+    <label>
+      Duties:
+      <input type="text" formControlName="duties">
+    </label>
+
+    <label>
+      Benefits:
+      <input type="text" formControlName="benefits">
+    </label>
+
+    <label>
+      Company Provisions:
+      <input type="text" formControlName="companyprovisions">
+    </label>
+
+
+
+
+
+
+  </div>
+
+
+
+
+  <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+</form>
+
+<hr>
+
+
+
+<!--
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
